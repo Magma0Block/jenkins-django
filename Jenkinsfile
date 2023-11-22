@@ -13,7 +13,7 @@ pipeline{
         }
         stage("test"){
             steps {
-                sh 'python -m coverage run -m test'
+                sh 'python -m coverage run -m manage.py test'
             }
         }
         stage("report"){
