@@ -4,6 +4,7 @@ pipeline{
             image 'python:latest'
             args'-u root'
         }
+    }
     stages {
         stage("install deps") {
             steps {
@@ -24,6 +25,6 @@ pipeline{
         }
     }
 
-    }
+
 
 }
