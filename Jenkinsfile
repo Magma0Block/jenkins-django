@@ -24,7 +24,10 @@ pipeline{
             }
         }
     }
-
-
-
+    post {
+        always {
+            archiveArtifacts 'htmlcov/*'
+            cobertura coberturaReportFile: 'coverage.xml'
+            }
+        }
 }
