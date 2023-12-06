@@ -1,8 +1,8 @@
 pipeline {
     agent none
     environment {
-        IMAGE_NAME = 'docker_hub'
-        HUB_CRED_ID = 'someCredID'
+        IMAGE_NAME = 'magmablock/django'
+        HUB_CRED_ID = 'd'
     }
     stages {
         stage("deps") {
