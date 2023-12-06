@@ -47,7 +47,7 @@ pipeline {
         stage("push") {
             agent any
             steps {
-                withCredentials([usernamePassword(credentialsId: "${HUB_CRED_ID}",
+                withCredentials([usernamePassword(credentialsId: "e604ab9e-f697-4885-8ff9-6651a015c9cc",
                 usernameVariable: 'HUB_USERNAME', passwordVariable: 'HUB_PASSWORD')]) {
                     sh 'docker login -u ${HUB_USERNAME} -p ${HUB_PASSWORD}'
                     sh 'docker push ${IMAGE_NAME}:${GIT_COMMIT}'
