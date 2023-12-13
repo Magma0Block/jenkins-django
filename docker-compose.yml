@@ -1,0 +1,5 @@
+services:
+    backend:
+        image: magmablock/django:latest
+        ports:
+            - 2300:31
